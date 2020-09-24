@@ -52,7 +52,7 @@
             android:layout_marginTop="152dp" android:layout_marginStart="75dp"
             app:layout_constraintStart_toEndOf="@+id/promptName"
             android:autoText="false" android:textSize="14sp"
-    />
+            android:maxLength="10" android:layout_marginEnd="110dp" app:layout_constraintEnd_toEndOf="parent"/>
     <EditText
             android:layout_width="140dp"
             android:layout_height="36dp"
@@ -90,13 +90,14 @@
             android:layout_marginEnd="109dp" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"/>
     <TextView
-            android:layout_width="233dp"
-            android:layout_height="57dp" android:id="@+id/message"
+            android:layout_width="241dp"
+            android:layout_height="93dp" android:id="@+id/message"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginTop="42dp" android:layout_marginBottom="53dp"
             app:layout_constraintBottom_toTopOf="@+id/inputName" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="111dp" android:layout_marginEnd="67dp"
             app:layout_constraintEnd_toEndOf="parent" android:textAlignment="center"
-            android:inputType="textNoSuggestions"/>
+            android:inputType="textNoSuggestions" android:scrollbarStyle="outsideOverlay" android:textSize="12sp"
+            app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="0.722"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

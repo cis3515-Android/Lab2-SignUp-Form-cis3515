@@ -19,6 +19,7 @@ public class FormActivity extends AppCompatActivity {
         final Button save = findViewById(R.id.saveButton);
         final TextView message = findViewById(R.id.message);
 
+
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -40,6 +41,7 @@ public class FormActivity extends AppCompatActivity {
                     t.show();
                 } else{
                     message.setText("Welcome " + userName + ", to the SignUpForm App");
+
                 }
 
             }
