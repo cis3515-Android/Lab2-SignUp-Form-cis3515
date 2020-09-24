@@ -17,6 +17,7 @@ public class FormActivity extends AppCompatActivity {
         final TextView password = findViewById(R.id.inputPassword);
         final TextView confirm = findViewById(R.id.inputConfirm);
         final Button save = findViewById(R.id.saveButton);
+        final TextView message = findViewById(R.id.message);
 
         save.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -26,18 +27,26 @@ public class FormActivity extends AppCompatActivity {
                 String userPassword = password.getText().toString();
                 String userConfirm = confirm.getText().toString();
 
+
                 boolean areNull = userName.equals("") || userEmail.equals("") || userPassword.equals("")|| userConfirm.equals("");
 
                 if (areNull) {
                     Toast t = Toast.makeText(FormActivity.this, "Must enter values for all input fields", Toast.LENGTH_SHORT);
+                    message.setText("");
                     t.show();
                 } else if (!(userPassword.compareTo(userConfirm) == 0)) {
                     Toast t = Toast.makeText(FormActivity.this, "Passwords don't match", Toast.LENGTH_SHORT);
+                    message.setText("");
                     t.show();
+                } else{
+                    message.setText("Welcome " + userName + ", to the SignUpForm App");
                 }
 
             }
         });
+
+
+
 
 
 
